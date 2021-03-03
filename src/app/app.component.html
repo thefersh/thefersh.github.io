@@ -1,4 +1,93 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div class="figure-header-background">blank</div>
+<app-navbar></app-navbar>
+<main>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="header-text align-items-center align-items-lg-start text-center text-lg-left">
+            <h1>Desarrollador Web y Entusiasta de la tecnologia</h1>
+            <p>Hola soy Fer</p>
+            <p>Un gusto conocerte</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 d-none d-lg-block">
+          <figure class="figure-header-container">
+            <img src="/assets/header.png">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section *ngIf="feactures.blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="secction-title d-flex flex-column align-items-center justify-content-center">
+            <h2>¿Hablamos de algo?</h2>
+          <p>Tengo un blog lleno de cosas interesantes.</p>
+          <p>Bueno si pudiste encontrarme sera aun mas emocionante</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="blog-scroll-container">
+            <app-blog></app-blog>
+            <app-blog></app-blog>
+            <app-blog></app-blog>
+            <app-blog></app-blog>
+            <app-blog></app-blog>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section *ngIf="feactures.projects">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center secction-title d-flex flex-column justify-content-center">
+          <h2>Vale, te muestro lo que hago ...</h2>
+          <p>Adivinaste, tambien tengo proyectos en los cuales trbajo dia a dia.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-4"><app-project></app-project></div>
+        <div class="col-12 col-lg-4"><app-project></app-project></div>
+        <div class="col-12 col-lg-4"><app-project></app-project></div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center"><a href="#" class="btn btn-primary">Ver Mas...</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section *ngIf="feactures.skill">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center secction-title d-flex flex-column justify-content-center">
+          <h2>Skill</h2>
+          <p>Hey, aqui te enseño mis habilidades</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-3 col-lg-2"><app-skill></app-skill></div>
+      </div>
+    </div>
+  </section>
+
+  <section *ngIf="feactures.member">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center secction-title d-flex flex-column justify-content-center">
+          <h2>Miembros</h2>
+          <p>Nada es imposible, asi que te dejo algunos planes para tu crecimiento</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-4 col-lg-4"><app-member></app-member></div>
+        <div class="col-6 col-md-4 col-lg-4"><app-member></app-member></div>
+        <div class="col-6 col-md-4 col-lg-4"><app-member></app-member></div>
+      </div>
+    </div>
+  </section>
+</main>
